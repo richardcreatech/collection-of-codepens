@@ -1,0 +1,56 @@
+*{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+header{
+    overflow: auto;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: rgb(1, 65, 65);
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 25px grey;
+}
+
+.spaced{
+    padding: 20px;
+}
+
+.spaced ul{
+    display: flex;
+    gap: 50px;
+}
+
+.spaced ul li, .spaced ul li a{
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: lightblue;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 30px;
+}
+
+.greenText{
+    color: rgb(1, 65, 65);
+    font-size: 60px;
+}
