@@ -11,6 +11,10 @@
     box-sizing: content-box;
 }
 
+body{
+    overflow: hidden;
+}
+
 header{
     overflow: auto;
     width: 100%;
