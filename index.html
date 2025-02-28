@@ -1,68 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="style.css">
-<head>
-    <style>
-        .loading {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100vh;
-          width: 200px;
-          height: 200px;
-          border-radius: 200rem;
-          border-top: 0.3rem solid black;
-          border-left: 0.3rem solid rgba(0, 0, 0, 0.377);
-          border-right: 0.3rem solid rgba(0, 0, 0, 0.377);
-          border-bottom: 0.3rem solid rgba(0, 0, 0, 0.377);
-          animation: identifier 0.5s linear infinite;
-        }
-  
-        
-  
-        @keyframes identifier {
-          0% {
-            rotate: 0deg;
-          }
-          100% {
-            rotate: 360deg;
-          }
-        }
-      </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexisaf Challenges Codepened</title>
-</head>
-<body>
-<header>
-    <i class="fa-brands fa-codepen"></i>
-    <nav class="spaced">
+  </head>
+  <body>
+    <header>
+      <i class="fa-brands fa-codepen"></i>
+      <nav class="spaced">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="setofProjects.html">Projects</a></li>
-            <li><a href="#">About</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="setofProjects.html">Projects</a></li>
+          <li><a href="#">About</a></li>
         </ul>
-    </nav>
-</header>
-    
-    <main class="originalState">
-       
+      </nav>
+    </header>
+
+    <main>
+      <span class="greenText"> Hello! </span> These are my Code Pen tasks
     </main>
-</body>
-<script src="https://kit.fontawesome.com/65d66cd159.js" crossorigin="anonymous"></script>
-<script>
-    let originalState = document.querySelector(".originalState");
-
-    window.onload = () => {
-      originalState.classList.add("loading");
-      document.querySelector(".loading").innerHTML = "";
-
-      setTimeout(() => {
-        originalState.classList.remove("loading");
-        originalState.innerHTML = `
-        <span class="greenText"> Hello! </span> These are my Code Pen tasks
-        `;
-      }, 3000);
-    };
-  </script>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/65d66cd159.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
