@@ -1,49 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="projectStyles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexisaf Challenges Codepened</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="projectStyles.css" />
+    <style>
+      .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 200px;
+        height: 200px;
+        border-radius: 200rem;
+        border-top: 0.3rem solid black;
+        border-left: 0.3rem solid rgba(0, 0, 0, 0.377);
+        border-right: 0.3rem solid rgba(0, 0, 0, 0.377);
+        border-bottom: 0.3rem solid rgba(0, 0, 0, 0.377);
+        animation: identifier 0.5s linear infinite;
+      }
 
+      
+
+      @keyframes identifier {
+        0% {
+          rotate: 0deg;
+        }
+        100% {
+          rotate: 360deg;
+        }
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexisaf Challenges Codepened</title>
+  </head>
+  <body>
     <header>
-        <i class="fa-brands fa-codepen"></i>
-        <nav class="spaced">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
+      <i class="fa-brands fa-codepen"></i>
+      <nav class="spaced">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
     </header>
-    
-    <main>
+
+    <main class="originalState">
+      
+    </main>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/65d66cd159.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    let originalState = document.querySelector(".originalState");
+
+    window.onload = () => {
+      originalState.classList.add("loading");
+      document.querySelector(".loading").innerHTML = "";
+
+      setTimeout(() => {
+        originalState.classList.remove("loading");
+        originalState.innerHTML = `
         <div>
-            <span>
-            <a target="_blank"  href="https://richards-mortgage-payement-site.netlify.app/" class="decorText">
-                <img src="Mortgage calculator pic.jpg" alt="">
-                <p>Mortgage Calculator</p>
-            </a>
+        <span>
+          <a
+            target="_blank"
+            href="https://richards-mortgage-payement-site.netlify.app/"
+            class="decorText"
+          >
+            <img src="Mortgage calculator pic.jpg" alt="" />
+            <p>Mortgage Calculator</p>
+          </a>
         </span>
 
         <span>
-            <a target="_blank" href="https://richards-three-columns.netlify.app/" class="decorText">
-                <img src="column project pic.jpg" alt="">
-                <p>Three Column Project</p>
-            </a>
+          <a
+            target="_blank"
+            href="https://richards-three-columns.netlify.app/"
+            class="decorText"
+          >
+            <img src="column project pic.jpg" alt="" />
+            <p>Three Column Project</p>
+          </a>
         </span>
 
-          <span>  
-            <a target="_blank" href="https://richards-profile-card.netlify.app/" class="decorText">
-                <img src="profilecard.jpg" alt="" >
-                <p>Profile Card</p>
-            </a>
+        <span>
+          <a href="" class="decorText">
+            <img src="profilecard.jpg" alt="" />
+            <p>Profile Card</p>
+          </a>
         </span>
-        </div>
-    </main>
-</body>
-<script src="https://kit.fontawesome.com/65d66cd159.js" crossorigin="anonymous"></script>
-
+      </div>
+        `;
+      }, 3000);
+    };
+  </script>
 </html>
